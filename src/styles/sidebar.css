@@ -1,0 +1,17 @@
+.btn-size {
+  background: white;
+  height: 33px;
+  width: 33px;
+  border-radius: 50%;
+}
+.activeChecked {
+  background: #eabf00 !important;
+}
+
+.sidebar-ul {
+  list-style: none;
+}
+
+.sidebar-ul li button {
+  outline: none;
+}
