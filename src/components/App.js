@@ -66,7 +66,10 @@ function App() {
       })
     );
   }
-
+  function handleDelete(id) {
+    let deleteItem = cartItems.filter((el) => el.id !== id);
+    setCartItems(deleteItem);
+  }
   return (
     <div>
       <Navbar
@@ -79,7 +82,11 @@ function App() {
           allProducts={filterProducts.length ? filterProducts : allProducts}
           setCartItems={setCartItems}
         />
-        <Cart cartItems={cartItems} setCartItems={setCartItems} />
+        <Cart
+          cartItems={cartItems}
+          setCartItems={setCartItems}
+          handleDelete={handleDelete}
+        />
       </main>
     </div>
   );

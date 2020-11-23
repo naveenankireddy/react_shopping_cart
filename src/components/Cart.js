@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/cart.css";
 
-function Cart({ cartItems, setCartItems }) {
+function Cart({ cartItems, setCartItems, handleDelete }) {
   return (
     <div>
       <ul>
@@ -65,6 +65,7 @@ function Cart({ cartItems, setCartItems }) {
                   >
                     +
                   </button>
+                  <button onClick={() => handleDelete(item.id)}>Del</button>
                 </div>
               </li>
             ))}
